@@ -1,0 +1,130 @@
+header {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+
+    img {
+      position: absolute;
+      transition: opacity 0.3s ease;
+    }
+    .aberto {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    li {
+      &:hover {
+        &:not(:last-child) {
+          a {
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+    }
+
+    a {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+
+      color: rgb(118, 113, 122);
+      padding: 0.5rem;
+      transition: color 0.3s ease-in;
+    }
+  }
+
+  @media (max-width: 768px) {
+   
+    .menu {
+      display: flex;
+    }
+    nav {
+      display: block;
+      position: absolute;
+      top: 9rem;
+      left: 0;
+      height: 0;
+      z-index: 40;
+      width: 100%;
+      transition: 0.6s;
+      visibility: hidden;
+      background: hsl(256, 26%, 20%) ;
+      background-size: cover;
+      overflow: hidden;
+      ul {
+        width: 100%;
+        max-width: 38rem;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 5rem;
+
+        li {
+          &:hover {
+            &:not(:last-child) {
+              a {
+                color: rgba(255, 255, 255, 0.575);
+              }
+            }
+          }
+        }
+
+        a {
+          color: hsl(0, 0%, 98%);
+        }
+      }
+    }
+    
+  }
+  @media (max-width:480px) {
+    nav{
+      background: hsl(256, 26%, 20%) url(../images/bg-pattern-mobile-nav.svg) no-repeat bottom;
+      
+    }
+  }
+  
+}
+
+html {
+  &.ativo {
+    overflow-y: hidden;
+
+    .menu{
+      .aberto{
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    nav {
+      display: block;
+      visibility: visible;
+      height: calc(100vh - 90px);
+    }
+  }
+  @media (max-width:768px) {
+     ::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+}

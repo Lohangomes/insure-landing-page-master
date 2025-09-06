@@ -1,0 +1,27 @@
+h1,
+h2,
+h3 {
+  line-height: 110%;
+
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 5.8rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+p {
+  line-height: 150%;
+  color: $Gray-50;
+  font-weight: 400;
+}

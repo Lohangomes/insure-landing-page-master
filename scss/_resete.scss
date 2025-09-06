@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.6rem;
+
+  font-family: $font-primaria;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: $Gray-50;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+span,
+a {
+  display: inline-block;
+}
+button {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+}
+picture {
+  display: block;
+}
+
+body{
+  background-color: #FFFFFF;
+}

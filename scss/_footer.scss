@@ -1,0 +1,58 @@
+footer {
+  padding-block: 8rem;
+
+  background: $Gray-50 url(../images/bg-pattern-footer-desktop.svg) no-repeat;
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    border-bottom: 2px solid rgba(131, 125, 135, 0.133);
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      li {
+        svg {
+          path {
+            transition: fill 0.3s ease;
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              fill: rgb(0, 0, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    margin-top: 5rem;
+    width: 100%;
+    max-width: 85rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      max-width: 100%;
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 3.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .social {
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+  }
+}
